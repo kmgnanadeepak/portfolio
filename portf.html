@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KM Gnana Deepak — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<div class="brand">
+<div class="logo">KD</div>
+<div>
+<h1>KM Gnana Deepak</h1>
+<p>Full Stack Developer & Premiere Pro Editor</p>
+</div>
+</div>
+<nav>
+<a href="#about" class="nav-link">About</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#blog" class="nav-link">Blog</a>
+<a href="#contact" class="nav-link">Contact</a>
+<a class="btn" href="/resume.pdf" download>Resume</a>
+</nav>
+</header>
+<section class="hero" id="about">
+<div class="hero-left">
+<h2>Hi — I'm <span style="color:var(--accent)">KM Gnana Deepak</span></h2>
+<div class="role">Full Stack Developer & Premiere Pro Editor</div>
+<div class="tag">Passionate Full Stacker and Editor</div>
+<div class="cta-row">
+<a class="btn" href="mailto:kmgnanadeepak@gmail.com">Email Me</a>
+<a class="btn secondary" href="tel:9441652345">Call</a>
+</div>
+<div style="margin-top:18px">
+<h3 class="section-title">Tech Stack</h3>
+<div class="badges">
+<div class="badge">MongoDB</div>
+<div class="badge">Express.js</div>
+<div class="badge">React.js</div>
+<div class="badge">Node.js</div>
+<div class="badge">MERN</div>
+<div class="badge">Premiere Pro</div>
+</div>
+</div>
+</div>
+<aside class="glass contact-card">
+<div>
+<strong>Contact</strong>
+<div style="color:var(--muted);font-size:13px">kmgnanadeepak@gmail.com</div>
+<div style="color:var(--muted);font-size:13px">+91 9441652345</div>
+</div>
+<div>
+<small style="color:var(--muted);">Available for hire</small>
+<div style="height:8px"></div>
+<div style="width:60px;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2))"></div>
+</div>
+</aside>
+</section>
+<section id="projects">
+<h3 class="section-title">Projects</h3>
+<div class="projects-grid">
+<div class="project-card">
+<div class="project-title">Project A</div>
+<div class="project-desc">A MERN fullstack app with auth & realtime features</div>
+<div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node</span><span class="project-tag">MongoDB</span></div>
+</div>
+<div class="project-card">
+<div class="project-title">Video Edit: Promo</div>
+<div class="project-desc">Cinematic promo edit done in Premiere Pro</div>
+<div class="project-tags"><span class="project-tag">Premiere Pro</span><span class="project-tag">Color Grading</span></div>
+</div>
+</div>
+</section>
+<section id="contact">
+<h3 class="section-title">Contact</h3>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Your name" required>
+<input type="email" id="email" placeholder="Your email" required>
+<textarea id="message" placeholder="Your message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+</section>
+<footer>
+<div>© <span id="year"></span> KM Gnana Deepak</div>
+<div style="color:var(--muted)">Built with MERN ♥ • Dark glass UI</div>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){
+e.preventDefault();
+const n=document.getElementById('name').value.trim();
+const em=document.getElementById('email').value.trim();
+const m=document.getElementById('message').value.trim();
+if(!n||!em||!m){alert('Please fill all fields');return}
+window.location.href=`mailto:kmgnanadeepak@gmail.com?subject=${encodeURIComponent('Portfolio Contact from '+n)}&body=${encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\n'+m)}`;
+});
+</script>
+</div>
+</body>
+</html>
